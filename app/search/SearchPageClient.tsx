@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useCallback } from "react";
 import { useSearchParams } from "next/navigation";
+import Link from "next/link";
 import { SlidersHorizontal, LayoutGrid, List, Search, X } from "lucide-react";
 import CarCard from "@/components/CarCard";
 import FilterSidebar, { defaultFilters } from "@/components/FilterSidebar";
@@ -130,13 +131,13 @@ export default function SearchPageClient() {
                 {dropoffDate && ` → ${dropoffDate}`}
               </div>
             )}
-            <a
+            <Link
               href="/"
               className="flex items-center gap-1 text-gray-400 hover:text-white text-xs ml-auto transition-colors"
             >
               <X className="w-3.5 h-3.5" />
               Modify Search
-            </a>
+            </Link>
           </div>
         </div>
       </div>
